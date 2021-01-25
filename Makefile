@@ -1,4 +1,4 @@
-# executable name
+# executable name (remember to update .gitignore if you change it)
 output:= a.out
 # source files (without .c extension)
 srcs:= heck main
@@ -11,7 +11,7 @@ CFLAGS?= -Wall -Wextra -Os -g
 # location for intermediate files (.o and .mk)
 # (will be created automatically, as well as any subdirectories)
 # (ex: src `subdir/file` will create `.junk/subdir/` and compile `subdir/file.c` to `.junk/subdir/file.o`)
-junkdir:= .junk
+junkdir:= .junk # (remember to update .gitignore if changed)
 
 ######################################################################
 
