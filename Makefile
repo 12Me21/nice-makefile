@@ -1,12 +1,12 @@
 # executable name
-output:= parse
+output:= a.out
 # source files (without .c extension)
-srcs:= lexer parser main
+srcs:= heck main
 
 # compiler flags
 CFLAGS?= -Wall -Wextra -Os -g
 # libs to include when linking (passed as -l<name> flags)
-libs:= X11 lua5.3
+#libs:= X11 lua5.3
 
 # location for intermediate files (.o and .mk)
 # (will be created automatically, as well as any subdirectories)
