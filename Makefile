@@ -25,12 +25,12 @@ $(output): $(srcs:%=$(junkdir)/%.o)
 # this uses a feature of gcc, which parses a C file
 # and outputs a list of headers it depends on
 $(junkdir)/%.mk: %.c
-	@mkdir -p $(dir $<)
+	@mkdir -p $(dir $@)
 	$(cc) $(CFLAGS) -MF$@ -MG -MM -MP -MT$@ -MT$(<:%.c=$(junkdir)/%.o) $<
 
 # Compile
 $(junkdir)/%.o: %.c
-	@mkdir -p $(dir $<)
+	@mkdir -p $(dir $@)
 	$(cc) $(CFLAGS) -c $< -o $@
 
 # PROBLEM: this would include files even if `clean` is being run,
