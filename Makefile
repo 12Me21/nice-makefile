@@ -1,22 +1,22 @@
 # executable name
-output := parse
+output:= parse
 # source files (without .c extension)
-srcs := lexer parser main
+srcs:= lexer parser main
 
 # compiler flags
-CFLAGS ?= -Wall -Wextra -Os -g
+CFLAGS?= -Wall -Wextra -Os -g
 # libs to include when linking (passed as -l<name> flags)
-libs := X11 lua5.3
+libs:= X11 lua5.3
 
 # location for intermediate files (.o and .mk)
 # (will be created automatically, as well as any subdirectories)
 # (ex: src `subdir/file` will create `.junk/subdir/` and compile `subdir/file.c` to `.junk/subdir/file.o`)
-junkdir := .junk
+junkdir:= .junk
 
 ######################################################################
 
 # print status nicely (assumes ansi-compatible terminal)
-cc = @echo '[33m'$@'	[37mfrom: [32m'$^'[m' ; $(CC)
+cc= @echo '[33m'$@'	[37mfrom: [32m'$^'[m' ; $(CC)
 
 # Link
 $(output): $(srcs:%=$(junkdir)/%.o)
