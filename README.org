@@ -1,5 +1,5 @@
 A makefile (for C projects) that I've used a few times.<br>
-I use <u>gnu make</u> and <u>gcc</u>, on <u>linux</u><br>
+I use _gnu make_ and <u>gcc</u>, on <u>linux</u><br>
 this system should work with other platforms but I haven't tested it and it may need some changes.<br>
 
 <he>Features</h2>
