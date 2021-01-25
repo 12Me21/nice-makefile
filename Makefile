@@ -11,7 +11,8 @@ CFLAGS?= -Wall -Wextra -Os -g
 # location for intermediate files (.o and .mk)
 # (will be created automatically, as well as any subdirectories)
 # (ex: src `subdir/file` will create `.junk/subdir/` and compile `subdir/file.c` to `.junk/subdir/file.o`)
-junkdir:= .junk # (remember to update .gitignore if changed)
+junkdir:= .junk
+# (remember to update .gitignore if changed)
 
 ######################################################################
 
