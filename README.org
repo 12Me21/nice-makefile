@@ -1,14 +1,1 @@
-A makefile (for C projects) that I've used a few times.<br>
-I use _gnu make_ and <u>gcc</u>, on <u>linux</u><br>
-this system should work with other platforms but I haven't tested it and it may need some changes.<br>
-
-<he>Features</h2>
-<ul>
-<li>automatically determines which c files depend on which headers
-<li>requires almost no manual configuration, just give it a list of source files (and compiler flags etc.)
-<li>all temporary (`.o` etc.) files are placed in a subdirectory
-<li>clean output:<br>
-<img src=https://smilebasicsource.com/api/File/raw/4997>
-</ul>
-<h2>Bugs</h2>
-- no `make clean` (however, keep in mind you can use `make -B` to force remaking everything, and/or delete the files in the junk directory)
+test _test_ test
