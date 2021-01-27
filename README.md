@@ -1,6 +1,6 @@
 A makefile (for C projects) that I've used a few times.  
 I use **gnu make** and **gcc**, on **linux**  
-this should work with other platforms but I haven't tested it and it will need some changes.  
+the concept should work with other platforms, but I haven't tested it and it will need some changes.  
 
 ## Features
 - automatically determines which c files depend on which headers
