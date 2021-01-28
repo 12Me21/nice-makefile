@@ -26,14 +26,16 @@ $(output): $(srcs:%=$(junkdir)/%.o)
 # this uses a feature of gcc, which parses a C file
 # and outputs a list of headers it depends on
 $(junkdir)/%.mk: %.c
-	@mkdir -p $(dir $@)
 	$(cc) $(CFLAGS) -MF$@ -MG -MM -MP -MT$@ -MT$(<:%.c=$(junkdir)/%.o) $<
 
 # Compile
 $(junkdir)/%.o: %.c
-	@mkdir -p $(dir $@)
 	$(cc) $(CFLAGS) -c $< -o $@
 
+# Normally, Make will try to generate nonexistent included files (in this case, with our $(junkdir)/%.mk rule
+# But for some reason, include fails if the file is in a nonexistent directory.
+# This is the only solution I can think of:
+$(shell mkdir -p $(addprefix $(junkdir)/,$(dir $(srcs))))
 # PROBLEM: this would include files even if `clean` is being run,
 # causing it to generate dependency files.
 include $(srcs:%=$(junkdir)/%.mk)
