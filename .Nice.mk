@@ -1,5 +1,7 @@
 .EXTRA_PREREQS+= Makefile .Nice.mk
 
+output?= a.out
+
 # location for intermediate files (.o and .mk)
 # (will be created automatically, as well as any subdirectories)
 # (ex: src `subdir/file` will create `.junk/subdir/` and compile `subdir/file.c` to `.junk/subdir/file.o`)
