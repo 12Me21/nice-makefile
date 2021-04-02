@@ -1,6 +1,9 @@
-A makefile (for C projects) that I've used a few times.  
-I use **gnu make** and **gcc**, on **linux**  
-the concept should work with other platforms, but I haven't tested it and it will need some changes.  
+A makefile (for C projects) that I've used ~~a few~~ many times.
+# Requires
+- linux
+- gcc or clang
+- gnu make
+the concept should work with other platforms/compilers, but I haven't tested it and it may need some changes.  
 
 ## Features
 - automatically determines which c files depend on which headers
